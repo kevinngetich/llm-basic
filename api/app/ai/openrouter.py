@@ -6,7 +6,7 @@ def post_query(messages: list):
         base_url = settings.openrouter_base_url,
         api_key = settings.openrouter_api_key,
     )
-
+     
     completion = client.chat.completions.create(
         model = settings.openrouter_model,
         messages = messages
