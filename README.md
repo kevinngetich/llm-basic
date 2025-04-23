@@ -1,7 +1,7 @@
-## llm-basic
+# llm-basic
 Simple demonstration of LLM project implementation. App will ultimately provide for: front-end to make queries and view responses, backend to process query and integrate with LLM.
 
-# Setup
+## Setup
 1. Clone the project:
 ``` git clone https://github.com/kevinngetich/llm-basic.git ```
 2. Add an ``` .env ``` file in the ``` api ``` folder and populate the following:
@@ -19,4 +19,4 @@ fastapi dev main.py
 ```
 pnpm dev
 ```
-5. Navigate to 127.0.0.1:3000 on your browser.
+5. Navigate to ```http//127.0.0.1:3000``` on your browser.
