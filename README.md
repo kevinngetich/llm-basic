@@ -1,4 +1,6 @@
 # llm-basic
+![image](https://github.com/user-attachments/assets/58e5bd07-00ba-4328-8616-6a646a216974)
+
 Simple demonstration of LLM project implementation. App will ultimately provide for: front-end to make queries and view responses, backend to process query and integrate with LLM.
 
 ## Setup
