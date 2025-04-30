@@ -1,0 +1,38 @@
+services:
+  yinglong-api:
+    build:
+      args:
+        user: yinglong
+        uid: 1000
+      context: ./api
+      dockerfile: Dockerfile
+    image: my-little-llm
+    container_name: little-llm-api-yinglong
+    restart: unless-stopped
+    working_dir: /code
+    networks:
+      - yangtze
+    env_file:
+      - ./api/.env
+    ports:
+      - "8000:8000"
+  yinglong-ui:
+    build:
+      args:
+        user: yinglong
+        uid: 1000
+      context: ./ui
+      dockerfile: Dockerfile
+    image: my-little-llm-impl-uis
+    container_name: little-llm-ui-yinglong
+    restart: unless-stopped
+    working_dir: /app
+    networks:
+      - yangtze
+    env_file:
+      - ./ui/.env.staging.sample
+    ports:
+      - "3000:3000"
+networks:
+  yangtze:
+    driver: bridge
