@@ -4,6 +4,8 @@
 Simple demonstration of LLM project implementation. App will ultimately provide for: front-end to make queries and view responses, backend to process query and integrate with LLM.
 
 ## Setup
+
+### Method 1
 1. Clone the project:
 ``` git clone https://github.com/kevinngetich/llm-basic.git ```
 2. Add an ``` .env ``` file in the ``` api ``` folder and populate the following:
@@ -22,3 +24,7 @@ fastapi dev main.py
 pnpm dev
 ```
 5. Navigate to ```http//127.0.0.1:3000``` on your browser.
+
+## Method 2 (Much simpler)
+1. Repeat steps 1 & 2 from Method 1 above.
+2. Run the command ``` docker compose up -d ```
