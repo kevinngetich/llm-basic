@@ -25,6 +25,6 @@ pnpm dev
 ```
 5. Navigate to ```http//127.0.0.1:3000``` on your browser.
 
-## Method 2 (Much simpler)
+### Method 2 (Much simpler)
 1. Repeat steps 1 & 2 from Method 1 above.
 2. Run the command ``` docker compose up -d ```
