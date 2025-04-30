@@ -2,6 +2,7 @@
   "name": "create-nex-app",
   "version": "0.1.0",
   "private": true,
+  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.3.1",
     "@trpc/client": "^9.23.4",
     "@trpc/next": "^9.23.4",
     "@trpc/react": "^9.23.4",
