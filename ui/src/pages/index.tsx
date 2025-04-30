@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       setMessages((prevMessages) => [...prevMessages, `You: ${newMessage}`]);
       
       try{
-        await fetch('http://127.0.0.1:80/ai/openrouter/deepseek/post_query', {
+        await fetch('http://127.0.0.1:8000/ai/openrouter/deepseek/post_query', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -105,6 +105,8 @@ const Home: NextPage = () => {
             </div>
             <div className="flex gap-4">
               <textarea
+                id="userQuery"
+                aria-label="userQuery"
                 value={newMessage}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}

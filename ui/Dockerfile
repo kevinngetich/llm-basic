@@ -22,7 +22,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 COPY .env.staging.sample .env.production
-RUN npm run build
+RUN npm install pnpm -g
+RUN pnpm build
 
 FROM base AS runner
 WORKDIR /app
@@ -43,4 +44,5 @@ EXPOSE 3000
 
 ENV PORT=3000
 
-CMD ["HOSTNAME='0.0.0.0'", "node", "server.js"]
+# CMD ["HOSTNAME='0.0.0.0'", "node", "server.js"]
+CMD ["sh", "-c", "HOSTNAME='0.0.0.0' node server.js"]
